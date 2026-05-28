@@ -75,6 +75,16 @@ final class AudioRecorder: NSObject {
         state = .idle
     }
     
+    func reset() {
+        recorder?.stop()
+        recorder = nil
+        stopTimer()
+        currentTime = 0
+        audioFileURL = nil
+        state = .idle
+        errorMessage = nil
+    }
+    
     
     private func newAudioFileURL() -> URL{
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
