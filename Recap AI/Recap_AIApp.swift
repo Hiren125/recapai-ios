@@ -13,7 +13,17 @@ struct Recap_AIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MeetingListView()
+            TabView {
+                MeetingListView()
+                    .tabItem {
+                        Label("Meetings", systemImage: "waveform")
+                    }
+ 
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
         }
         .modelContainer(for: [Meeting.self, MeetingSummary.self])
     }

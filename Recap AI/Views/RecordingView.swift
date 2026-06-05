@@ -65,7 +65,9 @@ struct RecordingView: View {
                         }
  
                         Button {
-                            Task { await viewModel.stopAndTranscribe(context: context) }
+                            Task {
+                                await viewModel.stopAndProcess(context: context)
+                            }
                         } label: {
                             Label("Stop", systemImage: "stop.circle.fill")
                                 .foregroundStyle(.red)
