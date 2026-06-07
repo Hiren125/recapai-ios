@@ -103,6 +103,4 @@ final class RecordingViewModel {
         phase = .idle
         meeting = nil
     }
-    
-   
 }

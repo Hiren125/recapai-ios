@@ -77,32 +77,23 @@ struct RecordingView: View {
                 .font(.title3)
  
                 // Status
-                switch viewModel.phase {
-                case .idle:
-                    EmptyView()
-                case .recording:
-                    Label("Recording…", systemImage: "mic.fill")
-                        .foregroundStyle(.red)
-                case .transcribing:
-                    HStack {
-                        ProgressView()
-                        Text("Transcribing…")
+                Group {
+                    switch viewModel.phase {
+                    case .transcribing:
+                        ProcessingRow(icon: "waveform", label: "Transcribing audio…", isActive: true)
+                    case .summarizing:
+                        VStack(spacing: 8) {
+                            ProcessingRow(icon: "waveform", label: "Transcribed", isActive: false)
+                            ProcessingRow(icon: "sparkles", label: "Generating AI summary…", isActive: true)
+                        }
+                    case .done:
+                        Label("Done!", systemImage: "checkmark.circle.fill").foregroundStyle(.green)
+                    case .error(let msg):
+                        Text(msg).foregroundStyle(.red).multilineTextAlignment(.center)
+                    default:
+                        EmptyView()
                     }
-                case .summarizing:
-                    HStack {
-                        ProgressView()
-                        Text("Generating summary…")
-                    }
-                case .done:
-                    Label("Done!", systemImage: "checkmark.circle.fill")
-                        .foregroundStyle(.green)
-                case .error(let msg):
-                    Text(msg)
-                        .foregroundStyle(.red)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
                 }
- 
                 // Debug — remove after recording works
                 Text("Phase: \(String(describing: viewModel.phase))")
                     .font(.caption)
@@ -144,6 +135,23 @@ struct RecordingView: View {
         }
     }
  
+    struct ProcessingRow: View {
+        let icon: String
+        let label: String
+        let isActive: Bool
+
+        var body: some View {
+            HStack(spacing: 12) {
+                if isActive {
+                    ProgressView().controlSize(.small)
+                } else {
+                    Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
+                }
+                Text(label).foregroundStyle(isActive ? .primary : .secondary)
+            }
+        }
+    }
+    
     private func formattedTime(_ seconds: TimeInterval) -> String {
         let m = Int(seconds) / 60
         let s = Int(seconds) % 60
