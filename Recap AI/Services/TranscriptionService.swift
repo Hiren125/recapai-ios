@@ -12,11 +12,20 @@ struct TranscriptionService {
     private let apiKey: String
     private let urlString : String = "https://api.openai.com/v1/audio/transcriptions"
     
+    
+    
     init(apiKey: String = APIKeys.openAI) {
         self.apiKey = apiKey
     }
     
     func transcribe(audioURL:URL) async throws -> String{
+        
+        let attributes = try FileManager.default.attributesOfItem(atPath: audioURL.path)
+        let fileSize = attributes[.size] as? Int64 ?? 0
+        guard fileSize < 25_000_000 else {
+            throw TranscriptionError.apiError("Recording too large (max 25MB, ~90 minutes)")
+        }
+
         
         let url = URL(string: urlString)!
         

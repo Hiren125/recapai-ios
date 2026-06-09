@@ -55,6 +55,13 @@ final class RecordingViewModel {
         newMeeting.audioFileURL = audioURL
         newMeeting.durationSeconds = recorder.currentTime
         meeting = newMeeting
+        
+        guard recorder.currentTime > 2.0 else {
+            context.delete(newMeeting)
+            phase = .error("Recording too short. Try again.")
+            recorder.reset()
+            return
+        }
 
         // Step 1: Transcribe
         phase = .transcribing
