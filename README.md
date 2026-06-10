@@ -36,12 +36,13 @@ and generates structured summaries using GPT-4o.
 MVVM with SwiftData persistence. No backend required — all AI calls made
 directly from the app using URLSession async/await.
 
+```
 MeetingNotes/
 ├── Models/          # Meeting, MeetingSummary (SwiftData)
 ├── Services/        # AudioRecorder, TranscriptionService, SummarizationService
 ├── ViewModels/      # RecordingViewModel, MeetingListViewModel
 └── Views/           # MeetingListView, RecordingView, MeetingDetailView, SummaryView
-
+```
 ## API Cost
 Approx $0.06 per 10-min meeting (Whisper) + ~$0.005 per summary (GPT-4o).
 Full testing budget under $5.
