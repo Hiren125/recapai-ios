@@ -47,4 +47,4 @@ Approx $0.06 per 10-min meeting (Whisper) + ~$0.005 per summary (GPT-4o).
 Full testing budget under $5.
 
 ## Demo
-[Add your demo video link or GIF here]
+https://drive.google.com/file/d/1PylkoyRxeOrD4uO7TkwuHpYz6-g6X13D/view?usp=sharing
