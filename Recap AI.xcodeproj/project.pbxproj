@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		909EE98730074F4200EFE644 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 901E25782FBDF458001C33AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 901E257F2FBDF458001C33AE;
+			remoteInfo = "Recap AI";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		901E25802FBDF458001C33AE /* Recap AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recap AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		909EE98330074F4200EFE644 /* RecapAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecapAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = "Recap AI";
 			sourceTree = "<group>";
 		};
+		909EE98430074F4200EFE644 /* RecapAITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RecapAITests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		901E257D2FBDF458001C33AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909EE98030074F4200EFE644 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				901E25822FBDF458001C33AE /* Recap AI */,
+				909EE98430074F4200EFE644 /* RecapAITests */,
 				901E25812FBDF458001C33AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				901E25802FBDF458001C33AE /* Recap AI.app */,
+				909EE98330074F4200EFE644 /* RecapAITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 901E25802FBDF458001C33AE /* Recap AI.app */;
 			productType = "com.apple.product-type.application";
 		};
+		909EE98230074F4200EFE644 /* RecapAITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909EE98B30074F4200EFE644 /* Build configuration list for PBXNativeTarget "RecapAITests" */;
+			buildPhases = (
+				909EE97F30074F4200EFE644 /* Sources */,
+				909EE98030074F4200EFE644 /* Frameworks */,
+				909EE98130074F4200EFE644 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				909EE98830074F4200EFE644 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				909EE98430074F4200EFE644 /* RecapAITests */,
+			);
+			name = RecapAITests;
+			packageProductDependencies = (
+			);
+			productName = RecapAITests;
+			productReference = 909EE98330074F4200EFE644 /* RecapAITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					901E257F2FBDF458001C33AE = {
 						CreatedOnToolsVersion = 26.4;
+					};
+					909EE98230074F4200EFE644 = {
+						CreatedOnToolsVersion = 26.4;
+						TestTargetID = 901E257F2FBDF458001C33AE;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				901E257F2FBDF458001C33AE /* Recap AI */,
+				909EE98230074F4200EFE644 /* RecapAITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		901E257E2FBDF458001C33AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909EE98130074F4200EFE644 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		909EE97F30074F4200EFE644 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		909EE98830074F4200EFE644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 901E257F2FBDF458001C33AE /* Recap AI */;
+			targetProxy = 909EE98730074F4200EFE644 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		901E258B2FBDF45B001C33AE /* Debug */ = {
@@ -322,6 +397,48 @@
 			};
 			name = Release;
 		};
+		909EE98930074F4200EFE644 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HNR265QRT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiren.d.mistry.RecapAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recap AI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recap AI";
+			};
+			name = Debug;
+		};
+		909EE98A30074F4200EFE644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HNR265QRT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiren.d.mistry.RecapAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recap AI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recap AI";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +456,15 @@
 			buildConfigurations = (
 				901E258E2FBDF45B001C33AE /* Debug */,
 				901E258F2FBDF45B001C33AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909EE98B30074F4200EFE644 /* Build configuration list for PBXNativeTarget "RecapAITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909EE98930074F4200EFE644 /* Debug */,
+				909EE98A30074F4200EFE644 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
